@@ -7,8 +7,7 @@ namespace WindowsFormTest
 {
     class OvalPictureBox : PictureBox
     {
-        public OvalPictureBox()
-        {
+        public OvalPictureBox(){
         }
 
         protected override void OnResize(EventArgs e)
