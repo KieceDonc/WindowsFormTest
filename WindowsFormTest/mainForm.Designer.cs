@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormTest
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,34 +35,42 @@ namespace WindowsFormTest
             this.libraryPanel = new System.Windows.Forms.Panel();
             this.library = new System.Windows.Forms.PictureBox();
             this.settingsPanel = new System.Windows.Forms.Panel();
-            this.settings = new WindowsFormTest.OvalPictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userProfilePanel = new System.Windows.Forms.Panel();
-            this.userProfilePicture = new WindowsFormTest.OvalPictureBox();
+            this.ovalPictureBox1 = new WindowsFormTest.OvalPictureBox();
             this.downloadPanel = new System.Windows.Forms.Panel();
             this.download = new System.Windows.Forms.PictureBox();
             this.fillMenuPanel = new System.Windows.Forms.Panel();
             this.aboutPanel = new System.Windows.Forms.Panel();
             this.about = new System.Windows.Forms.PictureBox();
-            this.topMenuPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.fillTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.menuTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.searchTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchPicture = new System.Windows.Forms.PictureBox();
             this.staffChoiceLabel = new System.Windows.Forms.Label();
             this.categoriesLabel = new System.Windows.Forms.Label();
             this.bestRankLabel = new System.Windows.Forms.Label();
             this.forYouLabel = new System.Windows.Forms.Label();
+            this.menuUnderLine = new System.Windows.Forms.Panel();
             this.mainTableLayout.SuspendLayout();
             this.leftMainMenuPanel.SuspendLayout();
             this.leftSecondMenuTableLayout.SuspendLayout();
             this.libraryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.library)).BeginInit();
             this.settingsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.settings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.userProfilePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.downloadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.download)).BeginInit();
             this.fillMenuPanel.SuspendLayout();
             this.aboutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.about)).BeginInit();
-            this.topMenuPanel.SuspendLayout();
+            this.fillTableLayout.SuspendLayout();
+            this.menuTableLayout.SuspendLayout();
+            this.searchTableLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // mainTableLayout
@@ -73,7 +81,7 @@ namespace WindowsFormTest
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainTableLayout.Controls.Add(this.leftMainMenuPanel, 0, 0);
-            this.mainTableLayout.Controls.Add(this.topMenuPanel, 1, 0);
+            this.mainTableLayout.Controls.Add(this.fillTableLayout, 1, 0);
             this.mainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTableLayout.Location = new System.Drawing.Point(0, 0);
             this.mainTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -138,7 +146,7 @@ namespace WindowsFormTest
             // library
             // 
             this.library.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.library.Image = global::WindowsFormTest.Properties.Resources.labrary;
+            this.library.Image = global::WindowsFormTest.Properties.Resources.library;
             this.library.InitialImage = null;
             this.library.Location = new System.Drawing.Point(10, 7);
             this.library.Name = "library";
@@ -151,7 +159,7 @@ namespace WindowsFormTest
             // settingsPanel
             // 
             this.settingsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.settingsPanel.Controls.Add(this.settings);
+            this.settingsPanel.Controls.Add(this.pictureBox1);
             this.settingsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.settingsPanel.Location = new System.Drawing.Point(0, 50);
             this.settingsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -162,47 +170,44 @@ namespace WindowsFormTest
             this.settingsPanel.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
             this.settingsPanel.MouseLeave += new System.EventHandler(this.onMouseLeaveBackgroundAnimation);
             // 
-            // settings
+            // pictureBox1
             // 
-            this.settings.BackColor = System.Drawing.Color.Transparent;
-            this.settings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.settings.Image = global::WindowsFormTest.Properties.Resources.settings;
-            this.settings.Location = new System.Drawing.Point(10, 10);
-            this.settings.Margin = new System.Windows.Forms.Padding(10);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(30, 30);
-            this.settings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.settings.TabIndex = 1;
-            this.settings.TabStop = false;
-            this.settings.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::WindowsFormTest.Properties.Resources.settings;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
             // 
             // userProfilePanel
             // 
             this.userProfilePanel.BackColor = System.Drawing.Color.DimGray;
-            this.userProfilePanel.Controls.Add(this.userProfilePicture);
+            this.userProfilePanel.Controls.Add(this.ovalPictureBox1);
             this.userProfilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userProfilePanel.Location = new System.Drawing.Point(0, 0);
             this.userProfilePanel.Margin = new System.Windows.Forms.Padding(0);
             this.userProfilePanel.Name = "userProfilePanel";
-            this.userProfilePanel.Padding = new System.Windows.Forms.Padding(10);
+            this.userProfilePanel.Padding = new System.Windows.Forms.Padding(5);
             this.userProfilePanel.Size = new System.Drawing.Size(50, 50);
             this.userProfilePanel.TabIndex = 2;
             this.userProfilePanel.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
             this.userProfilePanel.MouseLeave += new System.EventHandler(this.onMouseLeaveBackgroundAnimation);
             // 
-            // userProfilePicture
+            // ovalPictureBox1
             // 
-            this.userProfilePicture.BackColor = System.Drawing.Color.DarkGray;
-            this.userProfilePicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userProfilePicture.Image = global::WindowsFormTest.Properties.Resources.Capture;
-            this.userProfilePicture.Location = new System.Drawing.Point(10, 10);
-            this.userProfilePicture.Margin = new System.Windows.Forms.Padding(10);
-            this.userProfilePicture.Name = "userProfilePicture";
-            this.userProfilePicture.Size = new System.Drawing.Size(30, 30);
-            this.userProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.userProfilePicture.TabIndex = 0;
-            this.userProfilePicture.TabStop = false;
-            this.userProfilePicture.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
+            this.ovalPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovalPictureBox1.Image = global::WindowsFormTest.Properties.Resources.Capture;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 0;
+            this.ovalPictureBox1.TabStop = false;
+            this.ovalPictureBox1.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
             // 
             // downloadPanel
             // 
@@ -269,27 +274,84 @@ namespace WindowsFormTest
             this.about.TabStop = false;
             this.about.MouseEnter += new System.EventHandler(this.onMouseEnterBackgroundAnimation);
             // 
-            // topMenuPanel
+            // fillTableLayout
             // 
-            this.topMenuPanel.BackColor = System.Drawing.Color.DimGray;
-            this.topMenuPanel.ColumnCount = 5;
-            this.topMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.topMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.topMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.topMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.topMenuPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.topMenuPanel.Controls.Add(this.staffChoiceLabel, 3, 0);
-            this.topMenuPanel.Controls.Add(this.categoriesLabel, 2, 0);
-            this.topMenuPanel.Controls.Add(this.bestRankLabel, 1, 0);
-            this.topMenuPanel.Controls.Add(this.forYouLabel, 0, 0);
-            this.topMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topMenuPanel.Location = new System.Drawing.Point(70, 20);
-            this.topMenuPanel.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.topMenuPanel.Name = "topMenuPanel";
-            this.topMenuPanel.RowCount = 1;
-            this.topMenuPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.topMenuPanel.Size = new System.Drawing.Size(1194, 60);
-            this.topMenuPanel.TabIndex = 1;
+            this.fillTableLayout.ColumnCount = 1;
+            this.fillTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.fillTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.fillTableLayout.Controls.Add(this.menuTableLayout, 0, 0);
+            this.fillTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fillTableLayout.Location = new System.Drawing.Point(53, 3);
+            this.fillTableLayout.Name = "fillTableLayout";
+            this.fillTableLayout.RowCount = 2;
+            this.fillTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.fillTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.fillTableLayout.Size = new System.Drawing.Size(1228, 605);
+            this.fillTableLayout.TabIndex = 1;
+            // 
+            // menuTableLayout
+            // 
+            this.menuTableLayout.BackColor = System.Drawing.Color.DimGray;
+            this.menuTableLayout.ColumnCount = 5;
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.menuTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.menuTableLayout.Controls.Add(this.searchTableLayout, 4, 0);
+            this.menuTableLayout.Controls.Add(this.staffChoiceLabel, 3, 0);
+            this.menuTableLayout.Controls.Add(this.categoriesLabel, 2, 0);
+            this.menuTableLayout.Controls.Add(this.bestRankLabel, 1, 0);
+            this.menuTableLayout.Controls.Add(this.forYouLabel, 0, 0);
+            this.menuTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuTableLayout.Location = new System.Drawing.Point(10, 10);
+            this.menuTableLayout.Margin = new System.Windows.Forms.Padding(10);
+            this.menuTableLayout.Name = "menuTableLayout";
+            this.menuTableLayout.RowCount = 1;
+            this.menuTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.menuTableLayout.Size = new System.Drawing.Size(1208, 60);
+            this.menuTableLayout.TabIndex = 1;
+            // 
+            // searchTableLayout
+            // 
+            this.searchTableLayout.ColumnCount = 2;
+            this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.searchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.searchTableLayout.Controls.Add(this.searchBox, 0, 0);
+            this.searchTableLayout.Controls.Add(this.searchPicture, 1, 0);
+            this.searchTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchTableLayout.Location = new System.Drawing.Point(530, 0);
+            this.searchTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.searchTableLayout.Name = "searchTableLayout";
+            this.searchTableLayout.RowCount = 1;
+            this.searchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.searchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.searchTableLayout.Size = new System.Drawing.Size(678, 60);
+            this.searchTableLayout.TabIndex = 5;
+            // 
+            // searchBox
+            // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBox.Location = new System.Drawing.Point(515, 3);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(100, 23);
+            this.searchBox.TabIndex = 2;
+            // 
+            // searchPicture
+            // 
+            this.searchPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchPicture.Image = global::WindowsFormTest.Properties.Resources.search;
+            this.searchPicture.Location = new System.Drawing.Point(633, 15);
+            this.searchPicture.Margin = new System.Windows.Forms.Padding(0);
+            this.searchPicture.Name = "searchPicture";
+            this.searchPicture.Size = new System.Drawing.Size(30, 30);
+            this.searchPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.searchPicture.TabIndex = 0;
+            this.searchPicture.TabStop = false;
             // 
             // staffChoiceLabel
             // 
@@ -306,6 +368,7 @@ namespace WindowsFormTest
             this.staffChoiceLabel.TabIndex = 3;
             this.staffChoiceLabel.Text = "Choix de l\'équipe";
             this.staffChoiceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.staffChoiceLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.onNavigationLabelClick);
             // 
             // categoriesLabel
             // 
@@ -322,6 +385,7 @@ namespace WindowsFormTest
             this.categoriesLabel.TabIndex = 2;
             this.categoriesLabel.Text = "Catégories";
             this.categoriesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.categoriesLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.onNavigationLabelClick);
             // 
             // bestRankLabel
             // 
@@ -338,6 +402,7 @@ namespace WindowsFormTest
             this.bestRankLabel.TabIndex = 1;
             this.bestRankLabel.Text = "Meilleurs Classement";
             this.bestRankLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bestRankLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.onNavigationLabelClick);
             // 
             // forYouLabel
             // 
@@ -354,34 +419,48 @@ namespace WindowsFormTest
             this.forYouLabel.TabIndex = 0;
             this.forYouLabel.Text = "Pour vous";
             this.forYouLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.forYouLabel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.onNavigationLabelClick);
             // 
-            // Form1
+            // menuUnderLine
+            // 
+            this.menuUnderLine.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.menuUnderLine.Location = new System.Drawing.Point(0, 0);
+            this.menuUnderLine.Name = "menuUnderLine";
+            this.menuUnderLine.Size = new System.Drawing.Size(283, 5);
+            this.menuUnderLine.TabIndex = 2;
+            // 
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1284, 611);
+            this.Controls.Add(this.menuUnderLine);
             this.Controls.Add(this.mainTableLayout);
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1300, 650);
-            this.Name = "Form1";
+            this.Name = "mainForm";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.mainForm_Shown);
             this.mainTableLayout.ResumeLayout(false);
             this.leftMainMenuPanel.ResumeLayout(false);
             this.leftSecondMenuTableLayout.ResumeLayout(false);
             this.libraryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.library)).EndInit();
             this.settingsPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.settings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.userProfilePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.userProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.downloadPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.download)).EndInit();
             this.fillMenuPanel.ResumeLayout(false);
             this.aboutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.about)).EndInit();
-            this.topMenuPanel.ResumeLayout(false);
-            this.topMenuPanel.PerformLayout();
+            this.fillTableLayout.ResumeLayout(false);
+            this.menuTableLayout.ResumeLayout(false);
+            this.menuTableLayout.PerformLayout();
+            this.searchTableLayout.ResumeLayout(false);
+            this.searchTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,10 +481,17 @@ namespace WindowsFormTest
         private System.Windows.Forms.Panel fillMenuPanel;
         private System.Windows.Forms.Panel aboutPanel;
         private System.Windows.Forms.PictureBox about;
-        private System.Windows.Forms.TableLayoutPanel topMenuPanel;
+        private System.Windows.Forms.Panel menuUnderLine;
+        private System.Windows.Forms.TableLayoutPanel fillTableLayout;
+        private System.Windows.Forms.TableLayoutPanel menuTableLayout;
         private System.Windows.Forms.Label staffChoiceLabel;
         private System.Windows.Forms.Label categoriesLabel;
         private System.Windows.Forms.Label bestRankLabel;
         private System.Windows.Forms.Label forYouLabel;
+        private System.Windows.Forms.TableLayoutPanel searchTableLayout;
+        private System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.PictureBox searchPicture;
+        private OvalPictureBox ovalPictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

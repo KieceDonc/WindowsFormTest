@@ -4,16 +4,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormTest{
 
-    public partial class Form1 : Form{
+    public partial class mainForm : Form{
 
         private Label[] navigationLabels;
         private Label currentNavigationLabel;
 
-        public Form1()
-        {
+        public mainForm() {
             InitializeComponent();
             currentNavigationLabel = forYouLabel;
             navigationLabels = new Label[] { forYouLabel, bestRankLabel, categoriesLabel, staffChoiceLabel };
+        }
+
+        private void mainForm_Shown(object sender, EventArgs e) {
+            drawLineUnderCurrentLabel();
         }
 
         private void onMouseEnterBackgroundAnimation(object sender, EventArgs e) {
@@ -38,7 +41,7 @@ namespace WindowsFormTest{
             }
         }
 
-        private void onNavigationLabelClick(object sender, EventArgs e) {
+        private void onNavigationLabelClick(object sender, MouseEventArgs e) {
             Label clickedLabel = sender as Label;
 
             Color colorForCurrentLabel = currentNavigationLabel.ForeColor;
@@ -60,14 +63,13 @@ namespace WindowsFormTest{
             }
 
             drawLineUnderCurrentLabel();
-
         }
 
         private void drawLineUnderCurrentLabel() {
-
+            Point currentNavigationLabelPoint = currentNavigationLabel.FindForm().PointToClient(currentNavigationLabel.Parent.PointToScreen(currentNavigationLabel.Location));
+            menuUnderLine.Location = new Point(currentNavigationLabelPoint.X, currentNavigationLabelPoint.Y+currentNavigationLabel.Height-10);
+            menuUnderLine.Height = 5;
+            menuUnderLine.Width = currentNavigationLabel.Width;
         }
-
-
-
     }
 }
